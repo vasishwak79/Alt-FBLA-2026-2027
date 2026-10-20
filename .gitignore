@@ -1,0 +1,13 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# Local database (re-created and re-seeded automatically)
+data/*.db
+data/*.db-*
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

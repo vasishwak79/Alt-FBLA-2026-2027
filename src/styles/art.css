@@ -1,0 +1,264 @@
+/*
+ * Colors for the SVG illustrations. Each illustration sets a category
+ * class (e.g. .art--media) which picks its main and soft colors, so the
+ * same drawing works in light, dark, and high-contrast themes.
+ */
+
+.logo-mark__bg {
+  fill: var(--color-primary);
+}
+
+.logo-mark__tile {
+  fill: var(--color-surface);
+}
+
+.logo-mark__accent {
+  fill: var(--color-accent);
+}
+
+.art--technology {
+  --art-main: var(--cat-technology);
+  --art-soft: var(--cat-technology-soft);
+}
+
+.art--media {
+  --art-main: var(--cat-media);
+  --art-soft: var(--cat-media-soft);
+}
+
+.art--spaces {
+  --art-main: var(--cat-spaces);
+  --art-soft: var(--cat-spaces-soft);
+}
+
+.art--stem {
+  --art-main: var(--cat-stem);
+  --art-soft: var(--cat-stem-soft);
+}
+
+.art--events {
+  --art-main: var(--cat-events);
+  --art-soft: var(--cat-events-soft);
+}
+
+.art {
+  width: 100%;
+  height: auto;
+}
+
+.art-bg {
+  fill: var(--art-soft);
+}
+
+.art-blob {
+  fill: var(--art-main);
+  opacity: 0.1;
+}
+
+.art-main {
+  fill: var(--art-main);
+}
+
+.art-main-dark {
+  fill: color-mix(in srgb, var(--art-main) 70%, var(--color-text));
+}
+
+.art-soft {
+  fill: var(--art-soft);
+}
+
+.art-paper {
+  fill: var(--color-surface);
+}
+
+.art-accent {
+  fill: var(--color-accent);
+}
+
+.art-line,
+.art-stroke {
+  fill: none;
+  stroke: color-mix(in srgb, var(--art-main) 70%, var(--color-text));
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.art-stroke-main {
+  fill: none;
+  stroke: var(--art-main);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.art-orbit {
+  fill: none;
+  stroke: var(--art-main);
+  stroke-width: 3;
+}
+
+.art-ground {
+  fill: none;
+  stroke: color-mix(in srgb, var(--art-main) 40%, transparent);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+/* ---------- Home page illustration ---------- */
+.hero-art {
+  width: 100%;
+  height: auto;
+}
+
+.hero-blob {
+  fill: var(--color-primary-soft);
+}
+
+.hero-blob-accent {
+  fill: var(--color-accent-soft);
+}
+
+.hero-shelf {
+  fill: var(--color-surface);
+  stroke: var(--color-border-strong);
+  stroke-width: 3;
+}
+
+.hero-shelf-line {
+  fill: none;
+  stroke: var(--color-border-strong);
+  stroke-width: 3;
+}
+
+.hero-shelf-foot {
+  fill: var(--color-border-strong);
+}
+
+.hero-dashed {
+  fill: none;
+  stroke: var(--color-border-strong);
+  stroke-width: 2;
+  stroke-dasharray: 6 5;
+}
+
+.hero-card {
+  filter: drop-shadow(0 10px 18px rgb(20 42 36 / 0.16));
+}
+
+.hero-card__bg {
+  fill: var(--color-surface);
+  stroke: var(--color-border);
+  stroke-width: 1.5;
+}
+
+.hero-primary {
+  fill: var(--color-primary);
+}
+
+.hero-primary-soft {
+  fill: var(--color-primary-soft);
+}
+
+.hero-accent {
+  fill: var(--color-accent);
+}
+
+.hero-accent-soft {
+  fill: var(--color-accent-soft);
+}
+
+.hero-ink {
+  fill: var(--color-text);
+}
+
+.hero-ink-soft {
+  fill: color-mix(in srgb, var(--color-text) 75%, transparent);
+}
+
+.hero-muted-soft {
+  fill: var(--color-surface-3);
+}
+
+.hero-avatar {
+  fill: var(--cat-media-soft);
+  stroke: var(--cat-media);
+  stroke-width: 3;
+}
+
+.hero-paper-line {
+  fill: none;
+  stroke: var(--color-on-primary);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.hero-success {
+  fill: var(--color-success);
+}
+
+.hero-check {
+  fill: none;
+  stroke: var(--color-surface);
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hero-check-dark {
+  fill: none;
+  stroke: var(--color-on-accent);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hero-slot--open {
+  fill: var(--color-success);
+}
+
+.hero-slot--limited {
+  fill: var(--color-accent);
+}
+
+.hero-slot--full {
+  fill: var(--color-surface-3);
+}
+
+.hero-sparkle {
+  fill: var(--color-accent);
+}
+
+/* ---------- Empty state illustration ---------- */
+.empty-art__shadow {
+  fill: var(--color-surface-3);
+}
+
+.empty-art__side {
+  fill: color-mix(in srgb, var(--color-accent) 70%, var(--color-text));
+}
+
+.empty-art__front {
+  fill: var(--color-accent);
+}
+
+.empty-art__flap {
+  fill: var(--color-accent-soft);
+  stroke: color-mix(in srgb, var(--color-accent) 70%, var(--color-text));
+  stroke-width: 1.5;
+}
+
+.empty-art__inside {
+  fill: color-mix(in srgb, var(--color-accent) 50%, var(--color-text));
+}
+
+.empty-art__lens {
+  fill: var(--color-surface);
+  stroke: var(--color-primary);
+  stroke-width: 5;
+}
+
+.empty-art__handle {
+  stroke: var(--color-primary);
+  stroke-width: 7;
+  stroke-linecap: round;
+}

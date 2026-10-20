@@ -1,0 +1,227 @@
+/*
+ * Design tokens: every color, font, size, and shadow used on the site.
+ * Components refer to these variables, so switching themes only means
+ * changing the values below.
+ *
+ * Text colors were checked against their backgrounds to meet WCAG 2.2 AA
+ * (at least 4.5:1 for normal text).
+ */
+
+:root {
+  /* Typography */
+  --font-body: 'Atkinson Hyperlegible', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Mono', Consolas, 'Courier New', monospace;
+
+  /* Surfaces */
+  --color-bg: #f6f4ee;
+  --color-surface: #ffffff;
+  --color-surface-2: #efece4;
+  --color-surface-3: #e4e0d4;
+  --color-border: #d9d4c7;
+  --color-border-strong: #8e8778;
+
+  /* Text */
+  --color-text: #1c2321;
+  --color-text-muted: #4d5753;
+  --color-heading: #142a24;
+
+  /* Brand */
+  --color-primary: #0f5c4d;
+  --color-primary-hover: #0a473b;
+  --color-primary-soft: #dcefe9;
+  --color-on-primary: #ffffff;
+  --color-accent: #f2b544;
+  --color-accent-hover: #e6a32a;
+  --color-accent-soft: #fcefd2;
+  --color-on-accent: #1c2321;
+  --color-link: #0f5c4d;
+  --color-focus: #1f56c4;
+  --color-band: #12352d;
+  --color-on-band: #f3f7f5;
+
+  /* Status */
+  --color-success: #11704b;
+  --color-success-soft: #dcf2e6;
+  --color-warning: #8a5300;
+  --color-warning-soft: #fff0d1;
+  --color-danger: #b42318;
+  --color-danger-soft: #fde6e3;
+  --color-info: #1f56c4;
+  --color-info-soft: #e3ebfc;
+  --color-neutral-soft: #ebe8e0;
+
+  /* Category colors (illustrations, chips, charts) */
+  --cat-technology: #1f56c4;
+  --cat-technology-soft: #e3ebfc;
+  --cat-media: #a3346b;
+  --cat-media-soft: #f9e3ee;
+  --cat-spaces: #0f5c4d;
+  --cat-spaces-soft: #dcefe9;
+  --cat-stem: #5b3fb8;
+  --cat-stem-soft: #ebe5fb;
+  --cat-events: #a3440a;
+  --cat-events-soft: #fde9da;
+
+  /* Shape and depth */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 2px rgb(20 42 36 / 0.06), 0 1px 1px rgb(20 42 36 / 0.04);
+  --shadow: 0 4px 16px rgb(20 42 36 / 0.08), 0 1px 3px rgb(20 42 36 / 0.06);
+  --shadow-lg: 0 18px 48px rgb(20 42 36 / 0.18);
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  /* Layout */
+  --container: 1200px;
+  --gutter: 1rem;
+  --header-height: 4.25rem;
+  --target-size: 44px;
+  --transition: 160ms ease;
+
+  color-scheme: light;
+}
+
+/* ---------- Dark theme ---------- */
+:root[data-theme='dark'] {
+  --color-bg: #0e1513;
+  --color-surface: #151f1c;
+  --color-surface-2: #1c2925;
+  --color-surface-3: #24342f;
+  --color-border: #2e3f3a;
+  --color-border-strong: #6c8079;
+
+  --color-text: #e7eeeb;
+  --color-text-muted: #a8b7b1;
+  --color-heading: #f3f7f5;
+
+  --color-primary: #5ed0b4;
+  --color-primary-hover: #82dcc6;
+  --color-primary-soft: #173a32;
+  --color-on-primary: #062019;
+  --color-accent: #f5c266;
+  --color-accent-hover: #f8d08a;
+  --color-accent-soft: #3b2e12;
+  --color-on-accent: #1c1606;
+  --color-link: #7fdcc4;
+  --color-focus: #9cbcff;
+  --color-band: #0a221c;
+  --color-on-band: #e7eeeb;
+
+  --color-success: #6ad7a3;
+  --color-success-soft: #143426;
+  --color-warning: #f5c266;
+  --color-warning-soft: #392b10;
+  --color-danger: #ff9a8f;
+  --color-danger-soft: #401c18;
+  --color-info: #9cbcff;
+  --color-info-soft: #1b2b4b;
+  --color-neutral-soft: #24302d;
+
+  --cat-technology: #8fb2ff;
+  --cat-technology-soft: #1b2a47;
+  --cat-media: #f08fc0;
+  --cat-media-soft: #3c1c2d;
+  --cat-spaces: #5ed0b4;
+  --cat-spaces-soft: #173a32;
+  --cat-stem: #b9a5ff;
+  --cat-stem-soft: #2a2346;
+  --cat-events: #f7a66e;
+  --cat-events-soft: #3d2516;
+
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow: 0 4px 18px rgb(0 0 0 / 0.45);
+  --shadow-lg: 0 18px 48px rgb(0 0 0 / 0.6);
+
+  color-scheme: dark;
+}
+
+/* ---------- High contrast (light) ---------- */
+:root[data-contrast='high'] {
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-2: #f2f2f2;
+  --color-surface-3: #e6e6e6;
+  --color-border: #1a1a1a;
+  --color-border-strong: #000000;
+  --color-text: #000000;
+  --color-text-muted: #1f1f1f;
+  --color-heading: #000000;
+  --color-primary: #00473a;
+  --color-primary-hover: #002e25;
+  --color-primary-soft: #d6f0e8;
+  --color-link: #00473a;
+  --color-focus: #0033cc;
+  --color-success: #00552f;
+  --color-warning: #6b3d00;
+  --color-danger: #8f0f05;
+  --color-info: #0033aa;
+}
+
+/* ---------- High contrast (dark) ---------- */
+:root[data-theme='dark'][data-contrast='high'] {
+  --color-bg: #000000;
+  --color-surface: #000000;
+  --color-surface-2: #121212;
+  --color-surface-3: #1f1f1f;
+  --color-border: #f5f5f5;
+  --color-border-strong: #ffffff;
+  --color-text: #ffffff;
+  --color-text-muted: #ececec;
+  --color-heading: #ffffff;
+  --color-primary: #7cf0d2;
+  --color-primary-hover: #a7f6e2;
+  --color-primary-soft: #0b3b30;
+  --color-link: #7cf0d2;
+  --color-focus: #ffd34d;
+  --color-success: #8af5be;
+  --color-warning: #ffd479;
+  --color-danger: #ffb3aa;
+  --color-info: #b8cfff;
+}
+
+/* ---------- Text size ---------- */
+html[data-text-size='large'] {
+  font-size: 112.5%;
+}
+
+html[data-text-size='larger'] {
+  font-size: 125%;
+}
+
+/* ---------- Easy-reading font: use Atkinson Hyperlegible everywhere ---------- */
+:root[data-font='legible'] {
+  --font-display: var(--font-body);
+}
+
+/* ---------- Reduced motion (operating system setting or our toggle) ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root[data-motion='reduce'] *,
+:root[data-motion='reduce'] *::before,
+:root[data-motion='reduce'] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
